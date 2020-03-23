@@ -40,7 +40,7 @@
             margin-bottom: 15px;
             width: 500px;
             @media screen and (max-width: $screen-tablet){
-                max-width: 300px;
+                max-width: 400px;
             }
             border: none;
             border-left:5px solid transparent;
@@ -62,7 +62,8 @@
                 border-color: green;
                 opacity: 1;
             }
-            &::placeholder{
+            &::placeholder,
+            &:placeholder-shown{
                 padding-left: 10px;
                 @include text($H50, 400, $white);
             }
@@ -77,6 +78,10 @@
             padding-left: 10px;
             padding-top: 15px;
             margin-bottom: 15px;
+            overflow: hidden;
+            @media screen and (min-width: $screen-tablet){
+                max-width: 500px;
+            }
             border: none;
                 border-left:5px solid transparent;
                 opacity: 0.5;

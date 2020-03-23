@@ -22,6 +22,7 @@
     }    
 }
 .photo-grid {
+  padding-bottom: 32px;
     &__row {
       @include flex(flex-start, stretch, column);
       @media screen and (min-width: $screen-tablet) {
@@ -31,6 +32,8 @@
         }
         &--medium {
           flex: 1 1 50%;
+          min-height: 47.5%;
+          min-width: 100%;
         }
       }
     }
@@ -48,10 +51,10 @@
           flex: 1 1 50%;
         }
         &--large {
-          flex: 1 1 calc(100%/3*2);
+          flex: 1 1 66.6%;
         }
         &--small {
-          flex: 1 1 calc(100%/3);
+          flex: 1 1 33.3%;
         }
       }
     }
@@ -61,10 +64,15 @@
       @include padding-hack(71%, cover);
       margin-bottom: 24px;
       box-shadow: 0 2px 5px 0 (black, 0.5);
+      transition: all 0.2s ease;
       &--marginless {
         margin-bottom: 0;
       }
       @media screen and (min-width: $screen-tablet) {
+        &:hover{
+          transform: scale(1.01);
+          box-shadow: 0 0 5px 1px black;
+        }
         margin-bottom: 0;
         &--large {
           padding-bottom: 46.5%;
