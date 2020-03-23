@@ -1,0 +1,36 @@
+.section-blog {
+    background-color: $blog-bg-color;
+    padding: 100px 24px 120px;
+    @include flex(flex-start, center, column);
+    &__title {
+      @include text($H900, 800, $white);
+      line-height: 0.75;
+      margin-bottom: 42px;
+    }
+    &__description {
+      @include text($H200, 400, $white);
+      display: flex;
+      justify-content: center;
+      line-height: 1.5;
+      max-width: 570px;
+      text-align: justify;
+      color: $white;
+      margin-bottom: 44px;
+      @media screen and (min-width: $screen-fullhd) {
+        font-size: $H400;
+    }
+    }
+    &__list {
+      @extend %container;
+      @include flex(space-between, center, column);
+      @media screen and (min-width: $screen-desktop){
+        flex-direction: row;
+      }
+    }
+    &__list-item {
+      @media screen and (min-width: $screen-iphone-plus){
+        margin-right: 30px;
+      }
+    }
+    }
+  

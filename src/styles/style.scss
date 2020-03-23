@@ -7,16 +7,19 @@
 @import './core/common';
 
 // Common components
-@import './components/common/button';
-@import './components/common/scroll';
-@import './components/common/burger';
-@import './components/common/link-card';
-@import './components/common/logo';
-@import './components/common/navigation';
-@import './components/common/photo-grid';
+@import "./components/common/button.scss";
+@import "./components/common/card.scss";
+@import "./components/common/scroll.scss";
+@import "./components/common/burger.scss";
+@import "./components/common/logo.scss";
 
 // Components
-@import './components/header';
-@import './components/section-about';
-@import './components/section-services';
-@import './components/section-gallery';
+@import "./components/header.scss";
+@import "./components/section-about.scss";
+@import "./components/section-services.scss";
+@import "./components/section-gallery.scss";
+@import "./components/section-subscribe.scss";
+@import "./components/section-blog.scss";
+@import "./components/section-contact.scss";
+@import "./components/section-footer.scss";
+

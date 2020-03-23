@@ -11,6 +11,7 @@ $gallery-bg-color: #FFE92F;
 $subscribe-bg-color: white;
 $blog-bg-color: #B07CF7;
 $footer-bg-color: #262626;
+$br-color: #355b82;
 
 // Button colors
 $header-btn-color: #FF6033;
@@ -21,6 +22,12 @@ $blog-btn-color: #F72B3B;
 // Text colors
 $text-main-color: #262626;
 $text-marked-color: #FF2B58;
+
+//Shadow
+$content-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+$card-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+$card-shadow-hover: 0 2px 5px rgba(0, 0, 0, 0.5);
+$button-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 
 @function calcRem($size) {
   $remSize: $size / 16px;

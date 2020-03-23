@@ -1,27 +1,51 @@
-.button {
-  border: none;
-  text-decoration: none;
-  outline: none;
-  padding: 12px 24px;
-  @include text($H300, 300, $white);
-  background-color: $header-btn-color;
-  text-transform: uppercase;
-  @include flex(center, center);
-  width: 100%;
-  text-align: center;
-  transition: all 0.2s ease;
-  @media screen and (min-width: $screen-tablet) {
-    width: fit-content;
-  }
-  @media screen and (min-width: $screen-desktop) {
-    &:hover {
-      box-shadow: 0 2px 5px 0 rgba(black, 0.5);
+.button{
+    text-decoration: none;
+    text-transform: uppercase;
+    @include text($H100, 400);
+    font-family: $base-font;
+    color: $white;
+    background-color: $blog-btn-color;
+    width: 100%;
+    padding: 20px 15px;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    @media screen and (min-width: $screen-fullhd) {
+        font-size: $H200;
     }
-  }
-  &--header {
-    background-color: $header-btn-color;
-  }
-  &--gallery {
-    background-color: $gallery-btn-color;
-  }
+    @media screen and(min-width: $screen-tablet){
+        width: 200px;
+        &:hover{
+            transform: scale(1.2);
+            box-shadow: $button-shadow;
+        } 
+        &--form{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            vertical-align: center;
+            width: 170px;  
+            height: 55px;
+            background-color: $subscribe-btn-color; 
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.2s ease;
+            border: none;
+        }
+    }
+    &--header{
+        background-color: $header-btn-color;
+        /* width: 75%; */
+    }
+    &--form{
+        background-color: $subscribe-btn-color;
+    }
+    &--contact{
+        background-color: $about-bg-color;
+        border: none;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+    }
 }

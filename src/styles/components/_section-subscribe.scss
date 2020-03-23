@@ -1,0 +1,64 @@
+.section-subscribe{
+    background-image: url("../images/subscribe.png");
+    background-size: cover;
+    background-position: 70% center;
+    position: relative;
+    height: 600px;
+    max-height: max-content;
+    &__container{
+        @extend %container;
+        @include flex(center, center, column);
+        @media screen and (min-width: $screen-tablet){
+            align-items: stretch;
+        }
+    }
+    &__title{
+        @include text($H800, 700, $dark);
+        padding-top:145px;
+        margin-bottom: 35px;
+    }
+    &__text{
+        @include text($H200, 300, $dark);
+        max-width: 545px;
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-fullhd) {
+            font-size: $H400;
+        }
+    }
+    &__form{
+        @include flex(flex-start, stretch, column);
+        outline: none;
+        width: 100%;
+        transition: all 0.2s ease;
+        @media screen and (min-width: $screen-tablet){
+            flex-direction: row;
+        }
+        &-text{
+            width: 100%;
+            @media screen and (min-width: $screen-tablet){
+                width: 570px;
+            }
+            padding: 20px 15px;
+            border: 1px solid $grey;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            &::placeholder{
+                @include text($H50, 300, $dark);
+            }
+            &:invalid:not(:placeholder-shown){
+                border-color: red;
+            }
+            &:valid{
+                border-color: green;
+            }
+        }
+        &:valid button{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+}
+input.text{
+    height: 100px;
+}
