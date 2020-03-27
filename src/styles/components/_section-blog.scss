@@ -3,9 +3,13 @@
     padding: 100px 24px 120px;
     @include flex(flex-start, center, column);
     &__title {
-      @include text($H900, 800, $white);
+      @include text($H700, 800, $white);
       line-height: 0.75;
       margin-bottom: 42px;
+      text-align: center;
+      @media screen {
+        font-size: $H900;
+      }
     }
     &__description {
       @include text($H200, 400, $white);

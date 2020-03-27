@@ -24,8 +24,12 @@
             margin-top: 180px;
         }
         &-title{
-            @include text($H900, 700, $white); 
+            @include text($H700, 700, $white); 
             margin-bottom: 24px;
+            text-align: center;
+            @media screen and (min-width: $screen-tablet){
+                font-size: $H900;
+            }
         }
         &-text{
             max-width: 500px;

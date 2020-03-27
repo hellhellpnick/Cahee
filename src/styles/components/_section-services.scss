@@ -21,11 +21,6 @@
             max-width: 400px;
             height: 100px;
             margin-bottom: 20px;
-            @media screen and (min-width: $screen-tablet){
-                &:hover{
-                    box-shadow: $card-shadow;
-                }
-            }
             cursor: pointer;
             &--text{
                 @include text($H300, 700, $dark);
@@ -33,15 +28,21 @@
                 text-align: center;
                 width: 300px;
             }
+            @media screen and (min-width: $screen-tablet){
+                &:hover{
+                    box-shadow: $card-shadow;
+                }
+                
+            }
         }
+    }
+    &__icon{
+        @include svg(60px, $dark);
     }
     &__icon-wrapper{
         width: 100px;
         @include flex(center, center);
         border-left: 1px solid $grey;
-    }
-    &__icon{
-        @include svg(60px, $dark);
     }
     &__tomato{
         position: relative;
@@ -49,9 +50,10 @@
             position: absolute;
         }
         &-title{
-            @include text($H800, 700, $white);
+            @include text($H700, 700, $white);
             position: absolute; 
             bottom: 40%;
+            text-align: center;
             @media screen and (min-width: $screen-tablet){
                 position: absolute;
                 top: 40%;

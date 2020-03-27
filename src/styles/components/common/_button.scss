@@ -16,9 +16,18 @@
     @media screen and(min-width: $screen-tablet){
         width: 200px;
         &:hover{
-            transform: scale(1.2);
-            box-shadow: $button-shadow;
+            transform: scale(1.1);
+            box-shadow: 6px 6px 6px 0 #66CCCC,
+                        -6px -6px 6px 0 #CCFF99;
         } 
+        &--header:hover{
+            box-shadow: 6px 6px 6px 0 #6899D3,
+                        -6px -6px  6px 0 #95EE6B;
+        }
+        &--contact:hover{
+            box-shadow: 6px 6px 6px 0 #FFCC66,
+                        -6px -6px 6px 0 #FF6666;
+        }
         &--form{
             display:flex;
             align-items: center;
@@ -30,8 +39,12 @@
             background-color: $subscribe-btn-color; 
             visibility: hidden;
             opacity: 0;
-            transition: all 0.2s ease;
+            transition: all 0.5s ease;
             border: none;
+            &:hover{
+                box-shadow: 6px 6px 6px 0 #CC6699,
+                            -6px -6px 6px 0 #9966CC;
+            }
         }
     }
     &--header{

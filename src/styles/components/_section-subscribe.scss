@@ -13,9 +13,13 @@
         }
     }
     &__title{
-        @include text($H800, 700, $dark);
+        @include text($H700, 700, $dark);
         padding-top:145px;
         margin-bottom: 35px;
+        text-align: center;
+        @media screen and (min-width: $screen-tablet){
+            font-size: $H900;
+        }
     }
     &__text{
         @include text($H200, 300, $dark);

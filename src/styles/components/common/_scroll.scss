@@ -10,8 +10,11 @@
   @include flex(flex-start, center, column);
   cursor: pointer;
   &:hover {
+    box-shadow: 0 0 2px 1px #6899D3,
+    0 0  2px 2px #95EE6B;
     &:after {
       transform: translateY(8px);
+      
     }
   }
   &:active {
