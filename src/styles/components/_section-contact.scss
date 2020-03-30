@@ -1,5 +1,5 @@
 .section-contact{
-    background-image: url("./images/contact.png");
+    background-image: url("/images/contact.png");
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -35,25 +35,60 @@
     }
     &__form{
         @include flex(space-around, stretch, column);
-        &-input{
-            @include text($H50, 400, $white);
-            margin-bottom: 15px;
-            max-width: 500px;
-            border: none;
-            border-left:5px solid transparent;
-            height: 50px;
-            color:$white;
-            background-color: $about-bg-color;
-            padding-left: 5px;
+        &:valid button{
+            visibility: visible;
             opacity: 1;
+        }
+    }
+    &__input{
+        @include text($H50, 400, $white);
+        margin-bottom: 15px;
+        max-width: 500px;
+        border: none;
+        border-left:5px solid transparent;
+        height: 50px;
+        color:$white;
+        background-color: $about-bg-color;
+        padding-left: 5px;
+        opacity: 1;
+        opacity: 0.5;
+        @media screen and (min-width: $screen-tablet){
+            width: 600px;
+        }            
+        &:hover{
+            opacity: 1;
+            border-color: $br-color;
+        }
+        &:invalid:not(:placeholder-shown){
+            border-color: red;
+            opacity: 1;
+        }
+        &:valid{
+            border-color: green;
+            opacity: 1;
+        }
+        &::placeholder,
+        &:placeholder-shown{
+            @include text($H50, 400, $white);
+        }
+        
+    }
+    &__textarea{
+        max-width: 500px;
+        background-color: $about-bg-color;
+        color:$white;
+        opacity: 1;
+        padding-left: 10px;
+        padding-top: 15px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        border: none;
+            border-left:5px solid transparent;
             opacity: 0.5;
-            @media screen and (min-width: $screen-tablet){
-                width: 600px;
-            }            
             &:hover{
                 opacity: 1;
-                border-color: $br-color;
-            }
+                border-color: $br-color;                    
+            }   
             &:invalid:not(:placeholder-shown){
                 border-color: red;
                 opacity: 1;
@@ -61,60 +96,28 @@
             &:valid{
                 border-color: green;
                 opacity: 1;
-            }
+            }             
+        
             &::placeholder,
             &:placeholder-shown{
-                padding-left: 10px;
                 @include text($H50, 400, $white);
             }
-            
-        }
-        &-textarea{
-            max-width: 500px;
-            background-color: $about-bg-color;
-            color:$white;
-            opacity: 1;
-            padding-left: 10px;
-            padding-top: 15px;
-            margin-bottom: 15px;
-            overflow: hidden;
-            border: none;
-                border-left:5px solid transparent;
-                opacity: 0.5;
-                &:hover{
-                    opacity: 1;
-                    border-color: $br-color;                    
-                }   
-                &:invalid:not(:placeholder-shown){
-                    border-color: red;
-                    opacity: 1;
-                }
-                &:valid{
-                    border-color: green;
-                    opacity: 1;
-                }             
-            
-            &::placeholder{
-                padding-left: 10px;
-                color:$white;
-                font-family: $base-font;  
-                @include text($H50, 400, $white);
-            }
-        }
-        &:valid button{
-            visibility: visible;
-            opacity: 1;
-        }
     }
     &__callback{
-        &-title{
+        &--title{
             @include text($H300, 700, $dark);
             line-height: 25px;
             text-transform: uppercase;
+            @media screen and (max-width: $screen-tablet){
+                text-align: center;
+            }                    
         }
-        &-text{
+        &--text{
             @include text($H200, 300, $dark);
             margin-bottom: 15px;
+            @media screen and (max-width: $screen-tablet){
+                text-align: center;
+            }                
         }
         margin-bottom: 15px;
     }

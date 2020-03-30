@@ -3,4 +3,8 @@
     @include text($logo-fs, 400, $footer-bg-color);
     font-family: $logo-font;
     line-height: 25px;
+    font-style: italic;
+    @media screen and(min-width: $screen-tablet) {
+        padding-top: 10px;
+    }
 }

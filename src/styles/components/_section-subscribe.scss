@@ -1,5 +1,5 @@
 .section-subscribe{
-    background-image: url("../images/subscribe.png");
+    background-image: url("/images/subscribe.png");
     background-size: cover;
     background-position: 70% center;
     position: relative;
@@ -14,19 +14,21 @@
     }
     &__title{
         @include text($H700, 700, $dark);
-        padding-top:145px;
+        padding-top:13%;
         margin-bottom: 35px;
         text-align: center;
         @media screen and (min-width: $screen-tablet){
-            font-size: $H900;
+            text-align: left;
         }
     }
     &__text{
         @include text($H200, 300, $dark);
         max-width: 545px;
         margin-bottom: 30px;
+        line-height: 1.5;
         @media screen and (min-width: $screen-fullhd) {
             font-size: $H400;
+            max-width: 630px;
         }
     }
     &__form{
@@ -40,8 +42,11 @@
         &-text{
             width: 100%;
             @media screen and (min-width: $screen-tablet){
-                width: 570px;
+                width:570px;
             }
+            @media screen and (min-width:$screen-tablet) {
+                width: 53%;
+            } 
             padding: 20px 15px;
             border: 1px solid $grey;
             margin-right: 30px;
@@ -62,7 +67,4 @@
         }
     }
 
-}
-input.text{
-    height: 100px;
 }

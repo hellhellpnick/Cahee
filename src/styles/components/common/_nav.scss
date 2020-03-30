@@ -1,0 +1,63 @@
+.nav{
+    &__fixed{
+        position: fixed;
+        @include flex(space-between, stretch, row);
+        @media screen and (min-width: $screen-tablet){
+            justify-content: space-around;
+            padding: 25px 0;
+        }
+        padding: 40px 10px;
+        width: 100%;
+        height: 100px;
+        z-index: 11;
+        background-color: rgba($white, 0.5);
+    }&__list{
+        position: fixed;
+        @include flex(flex-start, center, column);
+        top: 100px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        @media screen and (min-width: $screen-tablet){
+            flex-direction: row;
+            position: static;
+            padding: 0;       
+        }
+        &-item{
+            @include text($H100, 700, $footer-bg-color);
+            @media screen and (min-width: $screen-fullhd) {
+                font-size: $H300;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+            padding-bottom: 32px;
+                @media screen and (min-width: $screen-tablet){
+                    left: 0;
+                    margin-bottom: 0;
+                    margin-right: 32px;
+                    padding-bottom: 12px;
+                }
+            border-top: 3px solid transparent;
+            padding-top: 9px;
+            text-transform: uppercase;
+            @media screen and (min-width: $screen-tablet) {
+                &:hover{
+                    border-color: $header-btn-color;
+                    transition: all 0.2s ease;
+                }
+            }
+        } 
+        &-link{
+            padding: 24px;
+            @media screen and (min-width: $screen-tablet) {
+            padding: 0;
+            }
+            color: $footer-bg-color;
+        }
+    }
+}

@@ -1,23 +1,11 @@
 .header{
-    background-image: url("./images/header.png");
+    background-image: url("/images/header.png");
     background-size: cover;
     background-position: center center;
     position: relative;
     height: 100vh;
     max-height: max-content;
-    &__fixed{
-        position: fixed;
-        @include flex(space-between, stretch, row);
-        @media screen and (min-width: $screen-tablet){
-            justify-content: space-around;
-            padding: 25px 0;
-        }
-        padding: 35px 0;
-        width: 100%;
-        height: 100px;
-        z-index: 11;
-        background-color: rgba($white, 0.5);
-    }
+    padding-bottom: 200px;
     &__scroll {
         position: absolute;
         bottom: 120px;
@@ -31,16 +19,14 @@
         @include flex(center, center, column);
         @media screen and (min-width: $screen-tablet){
             @include flex(flex-start, stretch, column);
-            left:5%;
         }
-        &-title{
-            @include text($H800, 700, $dark);
+        &--title{
+            @include text($H800, 900, $dark);
             margin-bottom: 15px;
         }
-        &-text{
+        &--text{
             @include text($H200,300, $dark);
             line-height:27px;
-            text-align: justify;
             max-width: 370px;
             margin-bottom: 31px;
             @media screen and (min-width: $screen-fullhd) {
@@ -48,55 +34,5 @@
             }
         }
         
-    }
-    &__list{
-        position: fixed;
-        @include flex(flex-start, center, column);
-        top: 100px;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: 10;
-        @media screen and (min-width: $screen-tablet){
-            flex-direction: row;
-            position: static;
-            padding: 0;       
-        }
-        &-item{
-            @include text($H100, 700, $footer-bg-color);
-            @media screen and (min-width: $screen-fullhd) {
-                font-size: $H300;
-            }
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 10px;
-            padding-bottom: 32px;
-                @media screen and (min-width: $screen-tablet){
-                    left: 0;
-                    margin-bottom: 0;
-                    margin-right: 32px;
-                    padding-bottom: 12px;
-                }
-            border-top: 3px solid transparent;
-            padding-top: 9px;
-            text-transform: uppercase;
-            @media screen and (min-width: $screen-tablet) {
-                &:hover{
-                    border-color: $header-btn-color;
-                    transition: all 0.2s ease;
-                }
-            }
-            & a{
-                padding: 24px;
-                @media screen and (min-width: $screen-tablet) {
-                padding: 0;
-                }
-                color: $footer-bg-color;
-            }
-        } 
-    }
-    
+    }    
 }

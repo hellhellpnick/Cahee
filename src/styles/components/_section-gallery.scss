@@ -1,5 +1,7 @@
 .section-gallery{
+    position: relative;
     background-color: $gallery-bg-color;
+    padding-bottom: 100px;
     &__container{
         @extend %container;
     }
@@ -18,14 +20,16 @@
         max-width: 577px;
         margin: 0 auto;
         margin-bottom: 46px;
-        text-align: justify;
+        text-align: center;
+        line-height: 1.5;
         @media screen and (min-width: $screen-fullhd) {
             font-size: $H400;
+            max-width: 676px;
         }
     }    
 }
-.photo-grid {
-  padding-bottom: 32px;
+.grid {
+  padding-bottom: 50px;
     &__row {
       @include flex(flex-start, stretch, column);
       @media screen and (min-width: $screen-tablet) {

@@ -1,6 +1,11 @@
 %container {
-  max-width: $max-width;
   margin: 0 auto;
+  padding: 0 10px;
+  max-width: $max-width;
+  @media screen and (min-width: $screen-tablet){
+    padding: 0;
+  }
+  
 }
 
 %image-absolute {

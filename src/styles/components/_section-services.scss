@@ -22,12 +22,6 @@
             height: 100px;
             margin-bottom: 20px;
             cursor: pointer;
-            &--text{
-                @include text($H300, 700, $dark);
-                @include flex(center, center);
-                text-align: center;
-                width: 300px;
-            }
             @media screen and (min-width: $screen-tablet){
                 &:hover{
                     box-shadow: $card-shadow;
@@ -58,9 +52,16 @@
                 position: absolute;
                 top: 40%;
                 font-size: $H900;
+                text-align: left;
             }
         }
     }
+}
+.item__text{
+    @include text($H300, 700, $dark);
+    @include flex(center, center);
+    text-align: center;
+    width: 300px;
 }
 .list-services{
     @include flex(center, center, column);

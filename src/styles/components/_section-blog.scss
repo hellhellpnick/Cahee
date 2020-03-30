@@ -3,11 +3,11 @@
     padding: 100px 24px 120px;
     @include flex(flex-start, center, column);
     &__title {
-      @include text($H700, 800, $white);
+      @include text($H800, 800, $white);
       line-height: 0.75;
       margin-bottom: 42px;
       text-align: center;
-      @media screen {
+      @media screen and (min-width: $screen-tablet){
         font-size: $H900;
       }
     }
@@ -15,13 +15,15 @@
       @include text($H200, 400, $white);
       display: flex;
       justify-content: center;
+      align-items: center;
       line-height: 1.5;
       max-width: 570px;
-      text-align: justify;
       color: $white;
       margin-bottom: 44px;
+      text-align: justify;
       @media screen and (min-width: $screen-fullhd) {
         font-size: $H400;
+        max-width: 700px;
     }
     }
     &__list {

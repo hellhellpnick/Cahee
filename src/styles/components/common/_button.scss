@@ -46,6 +46,17 @@
                             -6px -6px 6px 0 #9966CC;
             }
         }
+        &--gallery{
+            &:hover{
+                box-shadow: 6px 6px 6px 0 #CA3E3A,
+                            -6px -6px 6px 0 #CA6360;
+            }
+        }
+    }
+    &--gallery{
+        display: block;
+        margin: 0 auto;
+        background-color: #5585a2;
     }
     &--header{
         background-color: $header-btn-color;
@@ -53,6 +64,8 @@
     }
     &--form{
         background-color: $subscribe-btn-color;
+        outline: none;
+        border: none;
     }
     &--contact{
         background-color: $about-bg-color;

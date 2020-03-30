@@ -9,14 +9,16 @@
         @include text($H100, 300, $grey);
         line-height: 25px;
         margin: 0;
-        &:not(:last-child){
-            margin-bottom: 15px;
+        @media screen and (max-width: $screen-tablet){
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
         }
         @media screen and(min-width: $screen-tablet){
             margin-bottom: 0;
             font-size: $H400;
         }
-        &-love{
+        &--love{
             color: $text-marked-color;
         }
     }    
@@ -25,6 +27,7 @@
         @include text($H600, 400, $grey);
         line-height: 25px;
         margin-bottom: 15px;
+        font-style: italic;
         cursor: pointer;
         @media screen and(min-width: $screen-tablet){
             margin-bottom: 0;
