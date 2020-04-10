@@ -1,9 +1,11 @@
 .section-contact{
-    background-image: url("/images/contact.png");
+    background-image: url("../images/contact.png");
     background-size: cover;
     background-position: center center;
     position: relative;
     height: 100vh;
+    height: max-content;
+    padding-bottom: 100px;
     &__title{
         @include text($H700, 700, $dark);
         padding-top: 101px;
